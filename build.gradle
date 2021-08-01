@@ -1,0 +1,28 @@
+
+plugins {
+  id 'java'
+  id 'org.jetbrains.intellij' version '1.1.4'
+}
+
+group 'com.thftgr.redis'
+version '2.0.0'
+
+sourceCompatibility = 11
+
+repositories {
+  mavenCentral()
+}
+
+intellij {
+  version = '2021.2'
+}
+
+buildSearchableOptions {
+  enabled = false
+}
+
+patchPluginXml {
+  version = project.version
+  sinceBuild = '203'
+  untilBuild = '212.*'
+}
